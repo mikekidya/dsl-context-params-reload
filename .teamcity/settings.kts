@@ -35,7 +35,8 @@ object Build : BuildType({
 
     steps {
         script {
-            scriptContent = """echo "Henlo""""
+            val output = DslContext.getParameter("output", "defaultValue")
+            scriptContent = """echo """" + output + """""""
         }
     }
 })
